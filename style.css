@@ -68,9 +68,26 @@ main {
     }
 }
 footer{
+    color: #ffffff;
     background-color:#0c0a33 ;
     .logo-footer{
-        height: 75px;
+        height: 80px;
         margin: 40px;
+        margin-bottom: 20px;
+    }
+    .redes-footer{
+        margin-bottom: 20px;
+        margin-left: 40px;
+        .img-rede{
+            height: 50px;
+            padding-right: 10px;
+        }
+    }
+    .marca-registrada{
+        margin-left: 40px;
+        h3{
+            text-decoration: none;
+            font-weight: 500;
+        }
     }
 }
