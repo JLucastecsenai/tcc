@@ -84,9 +84,11 @@ footer{
         }
     }
     .marca-registrada{
+        padding-bottom: 10px;
         margin-left: 40px;
         h3{
             text-decoration: none;
+            padding-bottom: 20px;
             font-weight: 500;
         }
     }
