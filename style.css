@@ -64,6 +64,13 @@ main {
         background-color: #000000;
         height: 300px;
         text-align: center;
-        color: white;
+        color: #ffffff;
+    }
+}
+footer{
+    background-color:#0c0a33 ;
+    .logo-footer{
+        height: 75px;
+        margin: 40px;
     }
 }
