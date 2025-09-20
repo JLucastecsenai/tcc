@@ -36,7 +36,33 @@
       <h1>ORÇAMENTO</h1>
     </div>
     <div class="contato" id="contato">
-      <h1>CONTATO</h1>
+      <h1 class="titulo-contatos">CONTATO</h1>
+      <div class="formulario-contato">
+        <form action="#" method="POST" id="Formulario">
+          <div class="campo-formulario">
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome"  placeholder="Digite seu nome completo">
+          </div>
+
+          <div class="campo-formulario">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email"  placeholder="seu@email.com">
+          </div>
+
+          <div class="campo-formulario">
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
+          </div>
+
+          <div class="campo-formulario">
+            <label for="mensagem">Descreva o que você deseja:</label>
+            <textarea id="mensagem" name="mensagem" 
+              placeholder="Descreva em detalhes o que você precisa..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+        </form>
+      </div>
     </div>
   </main>
   <footer>
@@ -44,16 +70,65 @@
       <img class="logo-footer" src="imgs/logo site.png" alt="logo">
     </div>
     <div class="redes-footer">
-      <a  href=""><img class="img-rede" src="imgs/facebook.png" alt="facebook"></a>
-      <a  href=""><img class="img-rede" src="imgs/instagram.png" alt="instagram"></a>
-      <a  href=""><img class="img-rede" src="imgs/linkedin.png" alt="linkedin"></a>
-      <a  href=""><img class="img-rede" src="imgs/whatsapp.png" alt="whatsapp"></a>
+      <a href=""><img class="img-rede" src="imgs/facebook.png" alt="facebook"></a>
+      <a href=""><img class="img-rede" src="imgs/instagram.png" alt="instagram"></a>
+      <a href=""><img class="img-rede" src="imgs/linkedin.png" alt="linkedin"></a>
+      <a href=""><img class="img-rede" src="imgs/whatsapp.png" alt="whatsapp"></a>
     </div>
     <div class="marca-registrada">
-      <h3>contate-nos: <a href="mailto:contato@neohome.com.br?subject=Gostaria de fazer um orçmento" target="_blank"><b>contato@neohome.com.br</b></a></h3>
+      <h3>contate-nos: <a href="mailto:contato@neohome.com.br?subject=Gostaria de fazer um orçmento"
+          target="_blank"><b>contato@neohome.com.br</b></a></h3>
       <h3>®NEO HOME systens, 2025</h3>
     </div>
   </footer>
+  <script>
+    document.getElementById('Formulario').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Coletar dados do formulário
+      const formData = {
+        nome: document.getElementById('nome').value,
+        email: document.getElementById('email').value,
+        idade: document.getElementById('telefone').value,
+        mensagem: document.getElementById('mensagem').value
+      };
+
+      // Converter para JSON
+      const jsonData = JSON.stringify(formData, null, 2);
+
+      console.log('Dados em JSON:', jsonData);
+
+      function validarFormulario(dados) {
+        const erros = [];
+
+        if (!dados.nome || dados.nome.length < 3) {
+          erros.push('Nome deve ter pelo menos 3 caracteres');
+        }
+
+        if (!dados.email || !dados.email.includes('@')) {
+          erros.push('Email inválido');
+        }
+        if (!dados.telefone || dados.telefone.length < 8) {
+          erros.push('Telefone inválido');
+        }
+
+        if (!dados.mensagem || dados.mensagem.length < 10) {
+          erros.push('Mensagem deve ter pelo menos 10 caracteres');
+        }
+
+        return erros;
+      }
+
+      // Usar na função de submit:
+      const erros = validarFormulario(formData);
+      if (erros.length > 0) {
+        alert('Erros:\n' + erros.join('\n'));
+        return;
+      }
+
+      alert('Obrigado por entrar em contato, ' + formData.nome + '!');
+    });
+  </script>
 </body>
 
 </html>

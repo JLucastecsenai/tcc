@@ -54,39 +54,110 @@ main {
     }
 
     .orcamento {
-        background-color: #0c0a33;
+        background-color: #000000;
         height: 300px;
         text-align: center;
         color: white;
     }
 
     .contato {
-        background-color: #000000;
-        height: 300px;
-        text-align: center;
+        background-image: url(https://avt.com.br/wp-content/uploads/2024/06/casa-automatizada.jpg);
+        background-size: cover;
+        background-position: center;
+        box-shadow: inset 0 0 0 1000px rgba(12, 10, 51, 0.85);
+        height: 800px;
         color: #ffffff;
+
+        .titulo-contatos {
+            padding-top: 50px;
+            padding-left: 100px;
+        }
+
+        .formulario-contato {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+
+        .campo-formulario {
+            margin-bottom: 20px;
+            padding-right: 20px;
+        }
+
+        .campo-formulario label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .campo-formulario input,
+        .campo-formulario textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .campo-formulario textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .btn-enviar {
+            background-color: #0c0a33;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-enviar:hover {
+            background-color: #1a1760;
+        }
+
+        @media (max-width: 768px) {
+            .formulario-contato {
+                margin: 20px;
+                padding: 20px;
+            }
+        }
     }
 }
-footer{
+
+footer {
     color: #ffffff;
-    background-color:#0c0a33 ;
-    .logo-footer{
+    background-color: #0c0a33;
+
+    .logo-footer {
         height: 80px;
         margin: 40px;
         margin-bottom: 20px;
     }
-    .redes-footer{
+
+    .redes-footer {
         margin-bottom: 20px;
         margin-left: 40px;
-        .img-rede{
+
+        .img-rede {
             height: 50px;
             padding-right: 10px;
         }
     }
-    .marca-registrada{
+
+    .marca-registrada {
         padding-bottom: 10px;
         margin-left: 40px;
-        h3, a{
+
+        h3,
+        a {
             text-decoration: none;
             padding-bottom: 20px;
             font-weight: 500;
