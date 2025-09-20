@@ -86,10 +86,11 @@ footer{
     .marca-registrada{
         padding-bottom: 10px;
         margin-left: 40px;
-        h3{
+        h3, a{
             text-decoration: none;
             padding-bottom: 20px;
             font-weight: 500;
+            color: #ffffff;
         }
     }
 }
