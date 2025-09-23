@@ -61,7 +61,7 @@ main {
     }
 
     .contato {
-        background-image: url(https://avt.com.br/wp-content/uploads/2024/06/casa-automatizada.jpg);
+        background-image: url(imgs/casa-automatizada.jpg);
         background-size: cover;
         background-position: center;
         box-shadow: inset 0 0 0 1000px rgba(12, 10, 51, 0.85);

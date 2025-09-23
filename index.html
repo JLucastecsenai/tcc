@@ -51,7 +51,7 @@
 
           <div class="campo-formulario">
             <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
+            <input type="tel" id="telefone" name="telefone" required placeholder="(11) 99999-9999">
           </div>
 
           <div class="campo-formulario">
@@ -107,9 +107,6 @@
 
         if (!dados.email || !dados.email.includes('@')) {
           erros.push('Email inválido');
-        }
-        if (!dados.telefone || dados.telefone.length < 8) {
-          erros.push('Telefone inválido');
         }
 
         if (!dados.mensagem || dados.mensagem.length < 10) {
