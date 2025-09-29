@@ -133,6 +133,7 @@ main {
 }
 
 footer {
+    display: flex;
     color: #ffffff;
     background-color: #0c0a33;
 
@@ -183,5 +184,14 @@ footer {
                 color: #6b6a6a;
             }
         }
+    }
+    .endereço{
+        padding-left: 150px;
+        display: flex;
+        .texto-ende{
+            text-align: center;
+            padding-top: 230px;
+        }
+
     }
 }
