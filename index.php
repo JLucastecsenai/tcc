@@ -97,51 +97,6 @@
       </div>
     </div>
   </footer>
-  <script>
-    document.getElementById('Formulario').addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      // Coletar dados do formulário
-      const formData = {
-        nome: document.getElementById('nome').value,
-        email: document.getElementById('email').value,
-        idade: document.getElementById('telefone').value,
-        mensagem: document.getElementById('mensagem').value
-      };
-
-      // Converter para JSON
-      const jsonData = JSON.stringify(formData, null, 2);
-
-      console.log('Dados em JSON:', jsonData);
-
-      function validarFormulario(dados) {
-        const erros = [];
-
-        if (!dados.nome || dados.nome.length < 3) {
-          erros.push('Nome deve ter pelo menos 3 caracteres');
-        }
-
-        if (!dados.email || !dados.email.includes('@')) {
-          erros.push('Email inválido');
-        }
-
-        if (!dados.mensagem || dados.mensagem.length < 10) {
-          erros.push('Mensagem deve ter pelo menos 10 caracteres');
-        }
-
-        return erros;
-      }
-
-      // Usar na função de submit:
-      const erros = validarFormulario(formData);
-      if (erros.length > 0) {
-        alert('Erros:\n' + erros.join('\n'));
-        return;
-      }
-
-      alert('Obrigado por entrar em contato, ' + formData.nome + '!');
-    });
-  </script>
 </body>
 
 </html>
