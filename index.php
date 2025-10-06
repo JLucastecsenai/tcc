@@ -38,7 +38,7 @@
     <div class="contato" id="contato">
       <h1 class="titulo-contatos">CONTATO</h1>
       <div class="formulario-contato">
-        <form action="#" method="POST" id="Formulario">
+        <form method="POST" id="Formulario">
           <div class="campo-formulario">
             <label for="nome">Nome completo:</label>
             <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
@@ -97,6 +97,22 @@
       </div>
     </div>
   </footer>
+  <?php 
+          include "restrito/conexao.php";
+          
+          $nome = $_POST['nome'];
+          $email = $_POST['email'];
+          $telefone = $_POST['telefone'];
+          $mensagem = $_POST['msg'];
+
+          $sql = "INSERT INTO `mensagem` ( `nome`, `telefone`, `email`, `msg`) 
+                  VALUES ('$nome','$telefone','$email','$mensagem')";
+
+          if (mysqli_query($conn, $sql)) {
+            mensagem("$nome cadastrado com sucesso!",'success');
+          } else
+            mensagem("$nome NÃO cadastrado!",'danger');
+         ?> 
 </body>
 
 </html>
