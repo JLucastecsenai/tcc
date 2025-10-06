@@ -22,16 +22,20 @@
           $msg = $_POST['msg'];
           
 
-          $sql = "INSERT INTO `mensagem` ( `nome`, `email`, `telefone`, `msg`) 
+          $sql = "INSERT INTO `mensagem` (`nome`, `email`, `telefone`, `msg`) 
                   VALUES ('$nome','$email','$telefone','$msg')";
 
           if (mysqli_query($conn, $sql)) {
             mensagem("$nome cadastrado com sucesso!",'success');
+            header("refresh:0.5;url=index.php");
           } else
             mensagem("$nome NÃO cadastrado!",'danger');
+            header("refresh:0.5;url=index.php");
          ?> 
          <hr>
-         <a href="index.php" class="btn btn-primary">Voltar</a>      
+         <div class="alert alert-info text-center">
+           <p>Redirecionando para a página inicial em 3 segundos...</p>
+         </div>      
       </div>
     </div>
 

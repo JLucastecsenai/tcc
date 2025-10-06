@@ -80,7 +80,7 @@
       </div>
       <div class="marca-registrada">
         <h3>contate-nos: <a href="mailto:contato@neohome.com.br?subject=Gostaria de fazer um orçmento"
-            target="_blank"><b>contato@neohome.com.br</b></a></h3>
+            target="_self"><b>contato@neohome.com.br</b></a></h3>
         <h3>®NEO HOME systens, 2025</h3>
       </div>
     </div>
