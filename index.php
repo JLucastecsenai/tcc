@@ -56,7 +56,7 @@
 
           <div class="campo-formulario">
             <label for="mensagem">Descreva o que você deseja:</label>
-            <textarea id="mensagem" name="mensagem" placeholder="Descreva em detalhes o que você precisa..."></textarea>
+            <textarea id="mensagem" name="msg" placeholder="Descreva em detalhes o que você precisa..."></textarea>
           </div>
 
           <button type="submit" class="btn-enviar">Enviar Mensagem</button>
@@ -103,10 +103,10 @@
           $nome = $_POST['nome'];
           $email = $_POST['email'];
           $telefone = $_POST['telefone'];
-          $mensagem = $_POST['msg'];
+          $msg = $_POST['msg'];
 
           $sql = "INSERT INTO `mensagem` ( `nome`, `telefone`, `email`, `msg`) 
-                  VALUES ('$nome','$telefone','$email','$mensagem')";
+                  VALUES ('$nome','$telefone','$email','$msg')";
 
           if (mysqli_query($conn, $sql)) {
             mensagem("$nome cadastrado com sucesso!",'success');
