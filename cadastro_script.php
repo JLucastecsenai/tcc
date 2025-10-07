@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" href="cadastro.css">
 
     <title>Cadastro</title>
   </head>
@@ -26,13 +27,12 @@
                   VALUES ('$nome','$email','$telefone','$msg')";
 
           if (mysqli_query($conn, $sql)) {
-            mensagem("$nome cadastrado com sucesso!",'success');
-            header("refresh:0.5;url=index.php");
+            header("refresh:3;url=index.php");
           } else
             mensagem("$nome NÃO cadastrado!",'danger');
             header("refresh:0.5;url=index.php");
          ?> 
-         <hr>
+         
          <div class="alert alert-info text-center">
            <p>Redirecionando para a página inicial em 3 segundos...</p>
          </div>      

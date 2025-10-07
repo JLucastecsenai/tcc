@@ -41,22 +41,27 @@
         <form action="cadastro_script.php" method="POST" id="Formulario">
           <div class="campo-formulario">
             <label for="nome">Nome completo:</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" 
+                   maxlength="100">
           </div>
 
           <div class="campo-formulario">
             <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" placeholder="seu@email.com">
+            <input type="email" id="email" name="email" placeholder="seu@email.com" 
+                   maxlength="100">
           </div>
 
           <div class="campo-formulario">
             <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone" required placeholder="(11) 99999-9999">
+            <input type="tel" id="telefone" name="telefone" required 
+                   placeholder="(11) 99999-9999" maxlength="11"
+                   pattern="[0-9]{11}">
           </div>
 
           <div class="campo-formulario">
             <label for="msg">Descreva o que você deseja:</label>
-            <textarea id="msg" name="msg" placeholder="Descreva em detalhes o que você precisa..."></textarea>
+            <textarea id="msg" name="msg" placeholder="Descreva em detalhes o que você precisa..." 
+                     maxlength="500" rows="5"></textarea>
           </div>
 
           <button type="submit" class="btn-enviar">Enviar Mensagem</button>
@@ -97,5 +102,19 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // Previne o reenvio do formulário ao atualizar a página
+    if (window.history.replaceState) {
+      window.history.replaceState(null, null, window.location.href);
+    }
+
+    // Desabilita o botão após o envio para evitar múltiplos cliques
+    document.getElementById('Formulario').addEventListener('submit', function() {
+      const submitBtn = this.querySelector('.btn-enviar');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+    });
+  </script>
 </body>
 </html>
