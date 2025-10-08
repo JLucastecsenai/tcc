@@ -1,85 +1,73 @@
-<?php
-require_once 'conexao.php';
-
-// Se já estiver logado, redireciona para homepage
-if (verificarLogin()) {
-    header('Location: admin_homepage.php');
-    exit();
-}
-
-// Processa o login
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $login = $_POST['login'];
-    $senha = $_POST['senha_admin'];
-    
-    if (fazerLogin($login, $senha)) {
-        // Verifica se existe URL para redirecionar
-        if (isset($_SESSION['redirect_after_login'])) {
-            $redirect = $_SESSION['redirect_after_login'];
-            unset($_SESSION['redirect_after_login']);
-            header("Location: $redirect");
-        } else {
-            header('Location: admin_homepage.php');
-        }
-        exit();
-    } else {
-        $erro = "Usuário ou senha incorretos!";
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login - NeoHome</title>
+    <title>admin - NeoHome</title>
     <!-- Bootstrap 5 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <!-- Ícones do Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="admin_style.css">
 </head>
+
 <body>
 
-<div class="login-container">
-    <div class="text-center mb-4">
-        <i class="bi bi-shield-lock" style="font-size: 3rem; color: #0d6efd;"></i>
-        <h2 class="mt-2">Login Administrativo</h2>
-        <p class="text-muted">NeoHome System</p>
-    </div>
-    
-    <?php
-    // Exibe mensagem de erro se houver
-    if (isset($erro)) {
-        mensagem($erro, 'danger');
-    }
-    
-    // Exibe mensagens da sessão (ex: "Você foi desconectado")
-    exibirMensagemSessao();
-    ?>
-    
-    <form action="" method="POST">
-        <div class="mb-3">
-            <label class="form-label">Usuário</label>
-            <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-person"></i></span>
-                <input type="text" class="form-control" name="login" placeholder="Digite seu usuário" required autofocus>
+    <div class="login-container">
+        <h2 class="text-center">Login</h2>
+        <form action="" method="POST">
+            <div class="mb-3">
+                <label class="form-label">Usuário</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-person"></i></span>
+                    <input type="text" class="form-control" name="login" placeholder="Digite seu usuário" required>
+                </div>
             </div>
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Senha</label>
-            <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-lock"></i></span>
-                <input type="password" class="form-control" name="senha_admin" placeholder="Digite sua senha" required>
+            <div class="mb-3">
+                <label class="form-label">Senha</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                    <input type="password" class="form-control" name="senha_admin" placeholder="Digite sua senha" required>
+                </div>
             </div>
-        </div>
-        <button type="submit" class="btn btn-primary w-100">
-            <i class="bi bi-box-arrow-in-right me-2"></i>Acessar Sistema
-        </button>
-    </form>
-</div>
+            <button type="submit" class="btn btn-primary w-100">Acessar</button>
+        </form>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <br>
+
+        <?php
+        session_start();
+        include('conexao.php');
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $login = mysqli_real_escape_string($conn, $_POST['login']);
+            $senha_digitada = $_POST['senha_admin'];
+
+            // Criptografa a senha digitada com SHA256
+            $senha_sha2 = hash('sha256', $senha_digitada);
+
+            $sql = "SELECT * FROM admin_login WHERE login = '$login' AND senha_admin = '$senha_sha2'";
+            $result = mysqli_query($conn, $sql);
+
+            if (mysqli_num_rows($result) > 0) {
+                $usuario = mysqli_fetch_assoc($result);
+
+                $_SESSION['usuario_id'] = $usuario['id'];
+                $_SESSION['usuario_login'] = $usuario['login'];
+                $_SESSION['funcionario_admin'] = $usuario['funcionario_admin'];
+
+                header('Location: admin_homepage.php');
+                exit();
+            } else {
+                mensagem("Usuário ou senha incorretos!", "danger");
+            }
+        }
+        ?>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
