@@ -56,12 +56,16 @@
                 $_SESSION['usuario_id'] = $usuario['id'];
                 $_SESSION['usuario_login'] = $usuario['login'];
                 $_SESSION['funcionario_admin'] = $usuario['funcionario_admin'];
+                $_SESSION['loggedin'] = true; // ← VARIÁVEL IMPORTANTE PARA O VALIDAR.PHP
 
                 header('Location: admin_homepage.php');
                 exit();
             } else {
                 mensagem("Usuário ou senha incorretos!", "danger");
             }
+        }
+        if (isset($_GET['msg'])) {
+            echo "<div class='alert alert-info'>" . htmlspecialchars($_GET['msg']) . "</div>";
         }
         ?>
     </div>

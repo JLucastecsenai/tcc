@@ -1,7 +1,4 @@
-<?php
-require_once "conexao.php";
-?>
-
+<?php include "../validar.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
