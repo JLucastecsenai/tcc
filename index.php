@@ -81,7 +81,7 @@
         <a href=""><img class="img-rede" src="imgs/whatsapp.png" alt="whatsapp"></a>
       </div>
       <div class="funcionario">
-        <h3>Já é nosso funcionario?:<a href="admin.html"><b>clique aqui</b></a></h3>
+        <h3>Já é nosso funcionario?:<a href="restrito/admin.php"><b>clique aqui</b></a></h3>
       </div>
       <div class="marca-registrada">
         <h3>contate-nos: <a href="mailto:contato@neohome.com.br?subject=Gostaria de fazer um orçmento"
