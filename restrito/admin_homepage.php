@@ -28,7 +28,7 @@
         <div class="MENSAGENS">
             <h2>MENSAGENS</h2>
             <p>Ao clicar no botão você sera recirecionado a uma pagina onde teram todas as mensagens de nossos clientes</p>
-            <button type="submit" onclick="RedirecionarParaMensagens()" class="btn btn-primary botao-mensagens">SAIR</button>
+            <button type="button" onclick="RedirecionarParaClientes()">ACESSAR</button>
         </div>
         <div class="CLIENTES">
             <h2>CLIENTES</h2>
@@ -50,7 +50,7 @@
 </body>
 <script>
     function RedirecionarParaMensagens(){
-        window.location.href = "../logout.php";
+        window.location.href = "pastas/mensagens.php";
     }
     function RedirecionarParaClientes(){
         window.location.href = "../index.php";
