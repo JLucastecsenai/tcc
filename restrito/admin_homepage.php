@@ -53,7 +53,7 @@
         <div class="cabecalho">
             <div class="logo">
                 <img src="../imgs/logo site.png" alt="logo do site">
-                <button type="submit" onclick="RedirecionarParaMensagens()" class="btn btn-danger">SAIR</button>
+                <button type="submit" onclick="Deslogar()" class="btn btn-danger">SAIR</button>
             </div>
         </div>
     </header>
