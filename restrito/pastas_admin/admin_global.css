@@ -1,0 +1,313 @@
+/* ===== VARIÁVEIS DE CORES ===== */
+:root {
+    --primary-color: #0c0a33;
+    --primary-hover: #1a1760;
+    --secondary-color: #6b6a6a;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --border-color: #dee2e6;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-hover: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* ===== ESTILOS GLOBAIS ===== */
+body {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* ===== CARDS E CONTAINERS ===== */
+.admin-container {
+    max-width: 1600px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.admin-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.admin-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+}
+
+.admin-card-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1a1760 100%);
+    color: white;
+    padding: 25px;
+    border-bottom: none;
+    text-align: center;
+}
+
+.admin-card-header h4 {
+    margin: 0;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.admin-card-body {
+    padding: 30px;
+    background: white;
+}
+
+/* ===== BOTÕES ===== */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1a1760 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #1a1760 0%, #2a2477 100%);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-hover);
+}
+
+.btn-success {
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-hover);
+}
+
+.btn-warning {
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-warning:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-hover);
+}
+
+.btn-danger {
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-hover);
+}
+
+.btn-outline-primary {
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    transform: translateY(-1px);
+}
+
+/* ===== TABELAS ===== */
+.admin-table {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.admin-table th {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1a1760 100%);
+    color: white;
+    border: none;
+    padding: 15px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.admin-table td {
+    padding: 15px;
+    text-align: center;
+    vertical-align: middle;
+    border-color: var(--border-color);
+    background: white;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(12, 10, 51, 0.05);
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+}
+
+/* ===== FORMULÁRIOS ===== */
+.form-control {
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(12, 10, 51, 0.25);
+    transform: translateY(-1px);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+/* ===== BADGES E ESTADOS ===== */
+.badge {
+    border-radius: 6px;
+    font-weight: 500;
+    padding: 6px 12px;
+}
+
+.status-badge {
+    font-size: 0.8em;
+}
+
+/* ===== MODAIS ===== */
+.modal-content {
+    border-radius: 15px;
+    border: none;
+    box-shadow: var(--shadow-hover);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1a1760 100%);
+    color: white;
+    border-bottom: none;
+    border-radius: 15px 15px 0 0;
+    padding: 20px;
+}
+
+.modal-header .btn-close {
+    filter: invert(1);
+}
+
+/* ===== NAVEGAÇÃO ===== */
+.search-container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-container .form-control {
+    flex-grow: 1;
+    border-radius: 8px 0 0 8px;
+}
+
+.search-container .btn {
+    border-radius: 0 8px 8px 0;
+}
+
+/* ===== UTILITÁRIOS ===== */
+.cliente-info {
+    text-align: left;
+}
+
+.cpf-formatado {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.endereco-completo {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.btn-action {
+    margin: 2px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-action:hover {
+    transform: scale(1.1);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .admin-container {
+        margin: 15px auto;
+        padding: 0 10px;
+    }
+    
+    .admin-card-body {
+        padding: 20px;
+    }
+    
+    .admin-table {
+        font-size: 0.9rem;
+    }
+    
+    .search-container {
+        flex-direction: column;
+    }
+    
+    .search-container .form-control,
+    .search-container .btn {
+        border-radius: 8px;
+    }
+}
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease;
+}
+
+/* ===== ESTADOS VAZIOS ===== */
+.empty-state {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.empty-state i {
+    font-size: 4rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.empty-state h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+}
