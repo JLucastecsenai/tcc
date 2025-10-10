@@ -36,11 +36,15 @@
         margin-left: 60px;
         margin-right: 60px;
         font-size: 25px;
-        height: 50px;
     }
 
     h2 {
         color: white;
+    }
+
+    .botao-clicar{
+        height: 50px;
+        font-size: 25px;
     }
 </style>
 
@@ -56,58 +60,49 @@
     <main>
         <div class="MENSAGENS">
             <h2>MENSAGENS</h2>
-            <p>Ao clicar no botão você sera recirecionado a uma pagina onde teram todas as mensagens de nossos clientes</p>
+            <p>Ao clicar no botão você sera redirecionadoo a uma pagina onde teram todas as mensagens de nossos possiveis clientes</p>
             <div class="d-grid gap-2 botao-acesso">
-                <button type="button" class="btn btn-primary" onclick="RedirecionarParaMensagens()">ACESSAR</button>
+                <button type="button" class="btn btn-primary botao-clicar" onclick="RedirecionarParaMensagens()">ACESSAR</button>
             </div>
         </div>
         <div class="CLIENTES">
             <h2>CLIENTES</h2>
-            <p>Ao clicar no botão você sera recirecionado a uma pagina onde teram todos os clientes cadastrados</p>
+            <p>Ao clicar no botão você sera redirecionado à página onde teram todos os clientes cadastrados</p>
             <div class="d-grid gap-2 botao-acesso ">
-                <button type="button" class="btn btn-primary" onclick="RedirecionarParaClientes()">ACESSAR</button>
+                <button type="button" class="btn btn-primary botao-clicar" onclick="RedirecionarParaClientes()">ACESSAR</button>
             </div>
         </div>
         <div class="DEMANDAS">
             <h2>DEMANDAS</h2>
-            <p>Ao clicar no botão você sera recirecionado a uma pagina onde teram todas as mensagens de nossos clientes</p>
+            <p>Ao clicar no botão você sera redirecionado à página onde teram as demandas a serem atendidas</p>
             <div class="d-grid gap-2 botao-acesso ">
-                <button type="button" class="btn btn-primary" onclick="RedirecionarParaDemandas()">ACESSAR</button>
+                <button type="button" class="btn btn-primary botao-clicar" onclick="RedirecionarParaDemandas()">ACESSAR</button>
             </div>
 
         </div>
         <div class="FUNCIONARIOS">
             <h2>FUNCIONARIOS</h2>
-            <p>Ao clicar no botão você sera recirecionado a uma pagina onde teram todas as mensagens de nossos clientes</p>
+            <p>Ao clicar no botão você sera redirecionado à página onde teram todos os funcionários cadastrados</p>
             <div class="d-grid gap-2 botao-acesso ">
-                <button type="button" class="btn btn-primary" onclick="RedirecionarParaFuncionarios()">ACESSAR</button>
+                <button type="button" class="btn btn-primary botao-clicar" onclick="RedirecionarParaFuncionarios()">ACESSAR</button>
             </div>
-
-        </div>
-        <div class="LOGOUT">
-
-        </div>
-
     </main>
-    <footer>
-
-    </footer>
 </body>
 <script>
     function RedirecionarParaMensagens() {
-        window.location.href = "pastas/mensagens.php";
+        window.location.href = "../restrito/pastas_admin/MENSAGENS.php";
     }
 
     function RedirecionarParaClientes() {
-        window.location.href = "../index.php";
+        window.location.href = "../restrito/pastas_admin/CLIENTES.php";
     }
 
     function RedirecionarParaDemandas() {
-        window.location.href = "../index.php";
+        window.location.href = "../restrito/pastas_admin/DEMANDAS.php";
     }
 
     function RedirecionarParaFuncionarios() {
-        window.location.href = "../index.php";
+        window.location.href = "../restrito/pastas_admin/FUNCIONARIOS.php";
     }
 
     function Deslogar() {
