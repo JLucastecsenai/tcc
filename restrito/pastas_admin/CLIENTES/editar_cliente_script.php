@@ -1,6 +1,6 @@
 <?php
-include "../../validar.php";
-include "../conexao.php";
+include "../../../validar.php";
+include "../../conexao.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id'])) {
     $id = (int)$_POST['id'];
@@ -32,12 +32,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id'])) {
             WHERE id = $id";
     
     if (mysqli_query($conn, $sql)) {
-        header("Location: CLIENTES.PHP?msg=Cliente atualizado com sucesso");
+        header("Location: ../CLIENTES.PHP?msg=Cliente atualizado com sucesso");
     } else {
         header("Location: editar_cliente.php?id=$id&msg=Erro ao atualizar cliente");
     }
 } else {
-    header("Location: CLIENTES.PHP");
+    header("Location: ../CLIENTES.PHP");
 }
 exit;
 ?>

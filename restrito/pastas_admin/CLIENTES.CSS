@@ -1,91 +1,38 @@
- body {
-     background-color: #f8f9fa;
-     font-family: 'Roboto', sans-serif;
- }
+/* Importa o CSS global */
+@import url('admin_global.css');
 
- .container {
-     max-width: 1200px;
-     margin-top: 50px;
- }
+/* Estilos específicos para a página de clientes */
+.cliente-info {
+    text-align: left;
+}
 
- .card-header {
-     background-color: #007bff;
-     color: white;
-     text-align: center;
-     font-size: 24px;
-     padding: 20px;
-     border-radius: 10px;
-     margin-bottom: 20px;
- }
+.cpf-formatado {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: var(--primary-color);
+}
 
- .navbar {
-     margin-bottom: 20px;
-     padding: 15px;
- }
+.telefone-formatado {
+    font-family: 'Courier New', monospace;
+    color: var(--dark-color);
+}
 
- .search-container {
-     display: flex;
-     gap: 10px;
-     width: 100%;
-     max-width: 600px;
-     margin: 0 auto;
- }
+.endereco-completo {
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.9rem;
+}
 
- .search-container .form-control {
-     flex-grow: 1;
- }
+/* Ajustes para tabela de clientes */
+.table td strong {
+    color: var(--primary-color);
+}
 
- .table th,
- .table td {
-     text-align: center;
-     vertical-align: middle;
- }
-
- .table th {
-     background-color: rgb(108, 119, 131);
-     color: white;
- }
-
- .table-hover tbody tr:hover {
-     background-color: #e9ecef;
- }
-
- .btn-group {
-     display: flex;
-     justify-content: space-between;
-     margin-top: 20px;
- }
-
- .btn-group .btn {
-     width: 48%;
- }
-
- .action-buttons {
-     display: flex;
-     gap: 5px;
-     justify-content: center;
- }
-
- .empty-state {
-     text-align: center;
-     padding: 60px 20px;
-     color: #6c757d;
- }
-
- .empty-state i {
-     font-size: 64px;
-     margin-bottom: 20px;
-     opacity: 0.5;
- }
-
- .new-client-btn {
-     margin-bottom: 20px;
-     text-align: right;
- }
-
- /* Ajuste para o botão de fechar na modal */
- .modal-header .btn-close {
-     position: absolute;
-     top: 10px;
-     right: 10px;
- }
+/* Responsividade específica */
+@media (max-width: 768px) {
+    .endereco-completo {
+        max-width: 150px;
+    }
+}

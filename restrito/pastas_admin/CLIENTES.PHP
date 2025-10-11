@@ -11,7 +11,7 @@
     <title>CLIENTES - NeoHome Admin</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="CLIENTES.css">
+    <link rel="stylesheet" href="CLIENTES.CSS">
 </head>
 <body>
     <?php
@@ -35,11 +35,11 @@
     ?>
 
     <div class="container">
-        <div class="card-header">Gerenciar Clientes - NeoHome</div>
+        <div class="card-header" style="background-color: #0c0a33;">Gerenciar Clientes - admin</div>
 
         <!-- Botão Novo Cliente -->
         <div class="new-client-btn">
-            <a href="cadastrar_cliente.php" class="btn btn-success">
+            <a href="CLIENTES/cadastrar_cliente.php" class="btn btn-success">
                 <i class="bi bi-person-plus"></i> Novo Cliente
             </a>
         </div>
@@ -107,7 +107,7 @@
                                     <button type='button' class='btn btn-info btn-sm' data-bs-toggle='modal' data-bs-target='#modalCliente$id' title='Ver Detalhes'>
                                         <i class='bi bi-eye'></i>
                                     </button>
-                                    <a href='editar_cliente.php?id=$id' class='btn btn-success btn-sm' title='Editar'>
+                                    <a href='CLIENTES/editar_cliente.php?id=$id' class='btn btn-success btn-sm' title='Editar'>
                                         <i class='bi bi-pencil'></i>
                                     </a>
                                     <button type='button' class='btn btn-danger btn-sm' data-bs-toggle='modal' data-bs-target='#confirma$id' onclick='pegar_dados($id, \"$nome\")' title='Excluir'>
@@ -147,7 +147,7 @@
                                     </div>
                                     <div class='modal-footer'>
                                         <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Fechar</button>
-                                        <a href='editar_cliente.php?id=$id' class='btn btn-success'>
+                                        <a href='CLIENTES/editar_cliente.php?id=$id' class='btn btn-success'>
                                             <i class='bi bi-pencil'></i> Editar Cliente
                                         </a>
                                     </div>
@@ -170,7 +170,7 @@
                                     </div>
                                     <div class='modal-footer'>
                                         <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cancelar</button>
-                                        <a href='excluir_cliente.php?id=$id' class='btn btn-danger'>Excluir</a>
+                                        <a href='CLIENTES/excluir_cliente.php?id=$id' class='btn btn-danger'>Excluir</a>
                                     </div>
                                 </div>
                             </div>
@@ -189,7 +189,7 @@
                         "Não há clientes cadastrados no sistema."; ?>
                 </p>
                 <?php if (!$pesquisa): ?>
-                    <a href="cadastrar_cliente.php" class="btn btn-success">
+                    <a href="CLIENTES/cadastrar_cliente.php" class="btn btn-success">
                         <i class="bi bi-person-plus"></i> Cadastrar Primeiro Cliente
                     </a>
                 <?php endif; ?>
@@ -198,10 +198,10 @@
 
         <!-- Rodapé com Navegação -->
         <div class="btn-group">
-            <a href="../admin_homepage.php" class="btn btn-info">
+            <a href="../admin_homepage.php" class="btn btn-info" style="background-color: #0c0a33; color: #fff;">
                 <i class="bi bi-arrow-left"></i> Voltar para o Dashboard
             </a>
-            <a href="../../index.php" class="btn btn-secondary">
+            <a href="../../index.php" class="btn btn-secondary;" style="background-color: #6c757d; color: #fff;">
                 <i class="bi bi-house"></i> Ir para o Site
             </a>
         </div>

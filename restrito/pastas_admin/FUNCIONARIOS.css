@@ -1,0 +1,75 @@
+/* Importa o CSS global */
+@import url('admin_global.css');
+
+/* Estilos específicos para a página de funcionários */
+.container {
+    max-width: 1400px;
+}
+
+/* Badge personalizado para cargos */
+.badge-cargo {
+    font-size: 0.9em;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* Informações de salário */
+.salario-info {
+    font-weight: 600;
+    color: var(--success-color);
+    font-size: 1rem;
+}
+
+/* Container de múltiplos botões */
+.new-item-btn {
+    margin-bottom: 20px;
+    text-align: right;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Modal de alteração de cargo */
+.cargo-atual {
+    display: inline-block;
+    padding: 8px 14px;
+    background-color: rgba(12, 10, 51, 0.1);
+    border-radius: 6px;
+    margin: 10px 0;
+}
+
+/* Select de cargo com estilo melhorado */
+.form-select {
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(12, 10, 51, 0.25);
+}
+
+/* Destaque para dados importantes */
+.info-destaque {
+    background-color: rgba(12, 10, 51, 0.05);
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/* Responsividade específica */
+@media (max-width: 768px) {
+    .new-item-btn {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .new-item-btn .btn {
+        width: 100%;
+    }
+}

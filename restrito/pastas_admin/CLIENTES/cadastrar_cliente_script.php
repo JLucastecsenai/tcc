@@ -1,6 +1,6 @@
 <?php
-include "../../validar.php";
-include "../conexao.php";
+include "../../../validar.php";
+include "../../conexao.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = mysqli_real_escape_string($conn, trim($_POST['nome']));
@@ -40,12 +40,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             ($complemento ? "'$complemento'" : "NULL") . ")";
     
     if (mysqli_query($conn, $sql)) {
-        header("Location: CLIENTES.PHP?msg=Cliente cadastrado com sucesso");
+        header("Location: ../CLIENTES.PHP?msg=Cliente cadastrado com sucesso");
     } else {
         header("Location: cadastrar_cliente.php?msg=Erro ao cadastrar cliente");
     }
 } else {
-    header("Location: CLIENTES.PHP");
+    header("Location: ../CLIENTES.PHP");
 }
 exit;
 ?>

@@ -101,11 +101,11 @@
                                                 </button>";
 
                                     if (!$lida) {
-                                        echo "<a href='marcar_lida.php?id=$id' class='btn btn-success btn-action btn-sm'>
+                                        echo "<a href='MENSAGENS/marcar_lida.php?id=$id' class='btn btn-success btn-action btn-sm'>
                                                 <i class='bi bi-check-lg'></i>
                                               </a>";
                                     } else {
-                                        echo "<a href='marcar_nao_lida.php?id=$id' class='btn btn-warning btn-action btn-sm'>
+                                        echo "<a href='MENSAGENS/marcar_nao_lida.php?id=$id' class='btn btn-warning btn-action btn-sm'>
                                                 <i class='bi bi-arrow-counterclockwise'></i>
                                               </a>";
                                     }
@@ -138,7 +138,7 @@
                                                 </div>
                                                 <div class='modal-footer'>
                                                     <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Fechar</button>
-                                                    " . (!$lida ? "<a href='marcar_lida.php?id=$id' class='btn btn-success'>Marcar como Lida</a>" : "") . "
+                                                    " . (!$lida ? "<a href='MENSAGENS/marcar_lida.php?id=$id' class='btn btn-success'>Marcar como Lida</a>" : "") . "
                                                 </div>
                                             </div>
                                         </div>
@@ -159,7 +159,7 @@
                                                 </div>
                                                 <div class='modal-footer'>
                                                     <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cancelar</button>
-                                                    <a href='excluir_mensagem.php?id=$id' class='btn btn-danger'>Excluir Mensagem</a>
+                                                    <a href='MENSAGENS/excluir_mensagem.php?id=$id' class='btn btn-danger'>Excluir Mensagem</a>
                                                 </div>
                                             </div>
                                         </div>

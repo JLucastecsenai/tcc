@@ -1,9 +1,9 @@
 <?php
-include "../../validar.php";
-include "../conexao.php";
+include "../../../validar.php";
+include "../../conexao.php";
 
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
-    header("Location: CLIENTES.PHP");
+    header("Location: ../CLIENTES.PHP");
     exit;
 }
 
@@ -12,7 +12,7 @@ $sql = "SELECT * FROM cliente WHERE id = $id";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) == 0) {
-    header("Location: CLIENTES.PHP?msg=Cliente não encontrado");
+    header("Location: ../CLIENTES.PHP?msg=Cliente não encontrado");
     exit;
 }
 
@@ -89,7 +89,7 @@ $cliente = mysqli_fetch_assoc($result);
                     </div>
                     
                     <div class="d-flex justify-content-between">
-                        <a href="CLIENTES.PHP" class="btn btn-secondary">
+                        <a href="../CLIENTES.PHP" class="btn btn-secondary">
                             <i class="bi bi-arrow-left"></i> Voltar
                         </a>
                         <button type="submit" class="btn btn-warning">

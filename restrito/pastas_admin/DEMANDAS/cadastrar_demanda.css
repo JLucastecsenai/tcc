@@ -1,0 +1,187 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.card-header {
+    background-color: #0c0a33;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.form-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #e9ecef;
+}
+
+.form-section h5 {
+    color: #0c0a33;
+    border-bottom: 2px solid #0c0a33;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #495057;
+    margin-bottom: 8px;
+}
+
+.form-control, .form-select {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 10px 12px;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #0c0a33;
+    box-shadow: 0 0 0 0.2rem rgba(12, 10, 51, 0.25);
+}
+
+.input-group-text {
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    color: #495057;
+}
+
+.text-muted {
+    font-size: 0.875rem;
+    margin-top: 4px;
+    display: block;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.btn-group .btn {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.btn-info:hover {
+    background-color: #0a0829 !important;
+}
+
+/* Estilo para o select */
+.form-select {
+    cursor: pointer;
+}
+
+.form-select:hover {
+    border-color: #0c0a33;
+}
+
+/* Grid de checkboxes de funcionários */
+.funcionarios-checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 12px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.funcionarios-checkbox-grid .form-check {
+    padding: 12px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border: 1px solid #e9ecef;
+    transition: all 0.2s;
+    margin: 0;
+}
+
+.funcionarios-checkbox-grid .form-check:hover {
+    background-color: #e9f5ff;
+    border-color: #0c0a33;
+}
+
+.funcionarios-checkbox-grid .form-check-input {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.funcionarios-checkbox-grid .form-check-input:checked {
+    background-color: #0c0a33;
+    border-color: #0c0a33;
+}
+
+.funcionarios-checkbox-grid .form-check-label {
+    cursor: pointer;
+    margin-left: 8px;
+    font-weight: 500;
+    color: #495057;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        margin-top: 20px;
+    }
+    
+    .form-card {
+        padding: 20px;
+    }
+    
+    .form-section {
+        padding: 15px;
+    }
+    
+    .funcionarios-checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .btn-group {
+        flex-direction: column;
+    }
+    
+    .btn-group .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

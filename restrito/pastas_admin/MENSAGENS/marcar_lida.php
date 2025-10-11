@@ -1,6 +1,6 @@
 <?php
-include "../../validar.php";
-include "../conexao.php";
+include "../../../validar.php";
+include "../../conexao.php";
 
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     $id = $_GET['id'];
@@ -14,12 +14,12 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     $sql = "UPDATE mensagem SET lida = 1 WHERE id = $id";
     
     if (mysqli_query($conn, $sql)) {
-        header("Location: MENSAGENS.PHP?msg=Mensagem marcada como lida");
+        header("Location: ../MENSAGENS.PHP?msg=Mensagem marcada como lida");
     } else {
-        header("Location: MENSAGENS.PHP?msg=Erro ao marcar mensagem como lida");
+        header("Location: ../MENSAGENS.PHP?msg=Erro ao marcar mensagem como lida");
     }
 } else {
-    header("Location: MENSAGENS.PHP?msg=ID inválido");
+    header("Location: ../MENSAGENS.PHP?msg=ID inválido");
 }
 exit;
 ?>
