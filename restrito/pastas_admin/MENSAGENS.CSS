@@ -1,0 +1,149 @@
+/* Importa o CSS global */
+@import url('admin_global.css');
+
+/* Estilos específicos para a página de mensagens */
+.container {
+    max-width: 1400px;
+}
+
+/* Badge de status de leitura */
+.status-badge {
+    font-size: 0.85em;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* Preview da mensagem na tabela */
+.mensagem-preview {
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    color: var(--dark-color);
+}
+
+/* Links de contato */
+.contact-link {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact-link:hover {
+    color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.contact-link i {
+    font-size: 1.1em;
+}
+
+/* Container da mensagem completa no modal */
+.message-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    margin-top: 15px;
+    max-height: 400px;
+    overflow-y: auto;
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+/* Informações do remetente */
+.sender-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    background-color: rgba(12, 10, 51, 0.05);
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.sender-info p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sender-info strong {
+    color: var(--primary-color);
+    min-width: 80px;
+}
+
+/* Botões de ação específicos para mensagens */
+.btn-action {
+    margin: 2px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-action:hover {
+    transform: scale(1.05);
+}
+
+/* Filtros de status */
+.filter-status {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter-status .btn {
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+/* Estado vazio específico para mensagens */
+.empty-inbox {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.empty-inbox i {
+    font-size: 5rem;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    opacity: 0.4;
+}
+
+.empty-inbox h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Responsividade específica */
+@media (max-width: 768px) {
+    .mensagem-preview {
+        max-width: 150px;
+    }
+    
+    .message-container {
+        padding: 15px;
+        max-height: 300px;
+    }
+    
+    .sender-info {
+        padding: 10px;
+    }
+    
+    .filter-status {
+        flex-direction: column;
+    }
+    
+    .filter-status .btn {
+        width: 100%;
+    }
+}
