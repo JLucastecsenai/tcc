@@ -943,7 +943,7 @@
 
           <div class="campo-formulario">
             <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" maxlength="15" pattern="[0-9]{10,11}" required>
+            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" maxlength="11" pattern="[0-9]{10,11}" required>
           </div>
 
           <div class="campo-formulario">
