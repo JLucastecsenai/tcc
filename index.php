@@ -980,7 +980,7 @@
 
       <div class="footer-section">
         <h3>Contato</h3>
-        <a href="mailto:contato@neohome.com.br">contato@neohome.com.br</a>
+        <a href="mailto:contato@neohomesystens.site">contato@neohomesystens.site</a>
         <a href="tel:+5531999999999">(31) 99999-9999</a>
         <p style="margin-top: 1rem;">Horário de atendimento:<br>Seg-Sex: 8h às 18h<br>Sáb: 8h às 12h</p>
       </div>

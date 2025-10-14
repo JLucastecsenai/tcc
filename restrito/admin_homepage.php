@@ -42,9 +42,24 @@
         color: white;
     }
 
-    .botao-clicar{
+    .link-acesso {
+        display: inline-block;
         height: 50px;
+        width: 450px;
         font-size: 25px;
+        padding: 0.5rem 2rem;
+        background-color: #0d6efd;
+        color: white;
+        text-decoration: none;
+        border-radius: 0.375rem;
+        border: 1px solid #0d6efd;
+        transition: all 0.3s ease;
+    }
+
+    .link-acesso:hover {
+        background-color: #0b5ed7;
+        border-color: #0a58ca;
+        color: white;
     }
 </style>
 
@@ -60,51 +75,36 @@
     <main>
         <div class="MENSAGENS">
             <h2>MENSAGENS</h2>
-            <p>Ao clicar no botão você sera redirecionadoo a uma pagina onde teram todas as mensagens de nossos possiveis clientes</p>
-            <div class="d-grid gap-2 botao-acesso">
-                <button type="button" class="btn btn-primary botao-clicar" onclick="RedirecionarParaMensagens()">ACESSAR</button>
+            <p>Ao clicar no link você será redirecionado a uma página onde terão todas as mensagens de nossos possíveis clientes</p>
+            <div class="botao-acesso">
+                <a href="../restrito/pastas_admin/MENSAGENS.php" class="link-acesso">ACESSAR</a>
             </div>
         </div>
         <div class="CLIENTES">
             <h2>CLIENTES</h2>
-            <p>Ao clicar no botão você sera redirecionado à página onde teram todos os clientes cadastrados</p>
-            <div class="d-grid gap-2 botao-acesso ">
-                <button type="button" class="btn btn-primary botao-clicar" onclick="RedirecionarParaClientes()">ACESSAR</button>
+            <p>Ao clicar no link você será redirecionado à página onde terão todos os clientes cadastrados</p>
+            <div class="botao-acesso">
+                <a href="../restrito/pastas_admin/CLIENTES.php" class="link-acesso">ACESSAR</a>
             </div>
         </div>
         <div class="DEMANDAS">
             <h2>DEMANDAS</h2>
-            <p>Ao clicar no botão você sera redirecionado à página onde teram as demandas a serem atendidas</p>
-            <div class="d-grid gap-2 botao-acesso ">
-                <button type="button" class="btn btn-primary botao-clicar" onclick="RedirecionarParaDemandas()">ACESSAR</button>
+            <p>Ao clicar no link você será redirecionado à página onde terão as demandas a serem atendidas</p>
+            <div class="botao-acesso">
+                <a href="../restrito/pastas_admin/DEMANDAS.php" class="link-acesso">ACESSAR</a>
             </div>
 
         </div>
         <div class="FUNCIONARIOS">
             <h2>FUNCIONARIOS</h2>
-            <p>Ao clicar no botão você sera redirecionado à página onde teram todos os funcionários cadastrados</p>
-            <div class="d-grid gap-2 botao-acesso ">
-                <button type="button" class="btn btn-primary botao-clicar" onclick="RedirecionarParaFuncionarios()">ACESSAR</button>
+            <p>Ao clicar no link você será redirecionado à página onde terão todos os funcionários cadastrados</p>
+            <div class="botao-acesso">
+                <a href="../restrito/pastas_admin/FUNCIONARIOS.php" class="link-acesso">ACESSAR</a>
             </div>
+        </div>
     </main>
 </body>
 <script>
-    function RedirecionarParaMensagens() {
-        window.location.href = "../restrito/pastas_admin/MENSAGENS.php";
-    }
-
-    function RedirecionarParaClientes() {
-        window.location.href = "../restrito/pastas_admin/CLIENTES.php";
-    }
-
-    function RedirecionarParaDemandas() {
-        window.location.href = "../restrito/pastas_admin/DEMANDAS.php";
-    }
-
-    function RedirecionarParaFuncionarios() {
-        window.location.href = "../restrito/pastas_admin/FUNCIONARIOS.php";
-    }
-
     function Deslogar() {
         window.location.href = "../logout.php";
     }

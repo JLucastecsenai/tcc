@@ -12,7 +12,48 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="CLIENTES.CSS">
+    <style>
+        /* Importa o CSS global */
+        @import url('admin_global.css');
+
+        /* Estilos específicos para a página de clientes */
+        .cliente-info {
+            text-align: left;
+        }
+
+        .cpf-formatado {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .telefone-formatado {
+            font-family: 'Courier New', monospace;
+            color: var(--dark-color);
+        }
+
+        .endereco-completo {
+            max-width: 250px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 0.9rem;
+        }
+
+        /* Ajustes para tabela de clientes */
+        .table td strong {
+            color: var(--primary-color);
+        }
+
+        /* Responsividade específica */
+        @media (max-width: 768px) {
+            .endereco-completo {
+                max-width: 150px;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <?php
     $pesquisa = $_POST['busca'] ?? '';
